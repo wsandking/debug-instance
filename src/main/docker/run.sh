@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 #Put a default port number, if none.
 
