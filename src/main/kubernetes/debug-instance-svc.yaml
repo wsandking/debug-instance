@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: java-debug
+  labels:
+    layer: app
+    type: http
+    service: java-debug
+    version: v1.0.0.1
+    tier: business_logic
+    site: local
+spec:
+  ports:
+  - name: app
+    nodePort: 31002
+    port: 4000
+    protocol: TCP
+    targetPort: 4000
+  type: NodePort
+  selector:
+    service: java-debug

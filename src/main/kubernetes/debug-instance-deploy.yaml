@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: java-debug
+  labels:
+    layer: app
+    type: http
+    service: java-debug
+    version: v1.0.0.1
+    tier: business_logic
+    site: local
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        layer: app
+        type: http
+        service: java-debug
+        version: v1.0.0.1
+        tier: business_logic
+        site: local
+    spec:
+      containers:
+        - name: push
+          image: vip-intOAM:5001/remote-debugger/debug-instance:0.0.1.2-SNAPSHOT
+          ports:
+          - containerPort: 8080
+          - containerPort: 4000
+          env:
+          - name: JAVA_DEBUG_MODE
+            value: "false"
+          - name: JAVA_DEBUG_PORT
+            value: "4000"
