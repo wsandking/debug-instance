@@ -1,5 +1,6 @@
 package com.genband.debug;
 
+import com.genband.controlInterface.Application;
 import com.genband.util.broker.BrokerMessagingService;
 import com.genband.util.broker.BrokerType;
 import com.genband.util.broker.MessagingService;
@@ -7,6 +8,8 @@ import com.genband.util.broker.MessagingService;
 public class DebugInstanceExample {
 
     public static void main(String args[]) {
+
+        Application.startControlInterface(args);
 
         /*
          * Start message consumption

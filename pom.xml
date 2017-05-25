@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>debug-instance</artifactId>
-	<version>0.0.1.2-SNAPSHOT</version>
+	<version>0.0.1.4-SNAPSHOT</version>
 	<name>debug-instance</name>
 	<description>debug-instance</description>
 
@@ -14,9 +14,13 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>com.genband.util.ctl</groupId>
+			<artifactId>control-interface</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>com.genband.util</groupId>
-			<artifactId>broker-util</artifactId>
-			<version>0.0.21-SNAPSHOT</version>
+			<artifactId>ms-logging</artifactId>
+			<version>0.0.67</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
 		<dependency>
 			<groupId>com.genband.util</groupId>
@@ -34,6 +38,11 @@
 	</properties>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -79,6 +88,21 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<layout>JAR</layout>
+					<mainClass>com.genband.debug.DebugInstanceExample</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>com.spotify</groupId>
