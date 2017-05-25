@@ -11,7 +11,7 @@ public class DebugInstanceExample {
         /*
          * Start control interface
          */
-        Application.startControlInterface(args);
+        // Application.startControlInterface(args);
  
         /*
          * Start message consumption
