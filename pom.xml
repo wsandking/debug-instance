@@ -14,8 +14,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.genband.util.ctl</groupId>
-			<artifactId>control-interface</artifactId>
+			<groupId>com.genband.util</groupId>
+			<artifactId>broker-util</artifactId>
+			<version>0.0.21-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.genband.util</groupId>
