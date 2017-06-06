@@ -2,14 +2,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>debug-instance</artifactId>
-	<version>0.0.1.4-SNAPSHOT</version>
+	<version>0.0.1.6-SNAPSHOT</version>
 	<name>debug-instance</name>
 	<description>debug-instance</description>
 
 	<parent>
 		<groupId>com.genband.util</groupId>
 		<artifactId>base</artifactId>
-		<version>0.0.15</version>
+		<version>0.0.20</version>
 	</parent>
 
 	<dependencies>
@@ -20,12 +20,11 @@
 		<dependency>
 			<groupId>com.genband.util</groupId>
 			<artifactId>ms-logging</artifactId>
-			<version>0.0.67</version><!--$NO-MVN-MAN-VER$ -->
+			<version>0.0.67</version>
 		</dependency>
 		<dependency>
 			<groupId>com.genband.util</groupId>
 			<artifactId>broker-util</artifactId>
-			<version>0.0.21-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
