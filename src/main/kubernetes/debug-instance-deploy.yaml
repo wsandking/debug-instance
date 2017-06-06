@@ -23,10 +23,7 @@ spec:
     spec:
       containers:
         - name: push
-          image: vip-intOAM:5001/remote-debugger/debug-instance:0.0.1.2-SNAPSHOT
-          ports:
-          - containerPort: 8080
-          - containerPort: 4000
+          image: vip-intOAM:5001/remote-debugger/debug-instance:0.0.1.5-SNAPSHOT
           env:
           - name: JAVA_DEBUG_MODE
             value: "false"
