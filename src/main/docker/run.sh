@@ -14,4 +14,4 @@ else
    ARGS=""
 fi
 
-java -jar ${ARGS} app.jar
+java -jar -Dorg.springframework.boot.logging.LoggingSystem=none ${ARGS} app.jar
